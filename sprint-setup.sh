@@ -508,11 +508,11 @@ or just type 'node' and hit <TAB> to autocomplete script name.
 ========================================================================
 Enjoy your $TICKER Masternode and thanks for using this setup script!
 
-${GREEN}Great Thanks to Twystidceed who is the dev for the core of this code  
+${PURPLE}Great Thanks to Twystidceed who is the dev for the core of this code  
 ...and make sure to check back for updates!${NC}
 
 
-${GREEN}Contact Niko82#6343 on discord if you need additional support${NC}"
+${PURPLE}Contact Niko82#6343 on discord if you need additional support${NC}"
 delay 10
 # Run $MONITOR
 sudo $MONITOR
