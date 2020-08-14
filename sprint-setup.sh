@@ -508,7 +508,7 @@ or just type 'node' and hit <TAB> to autocomplete script name.
 ========================================================================
 Enjoy your $TICKER Masternode and thanks for using this setup script!
 
-${PURPLE}Great Thanks to Twystidceed who is the dev for the core of this code  
+${PURPLE}A great Thanks to Twystidceed who wrote the core of this code, i just did adaptation for this coin  
 ...and make sure to check back for updates!${NC}
 
 
