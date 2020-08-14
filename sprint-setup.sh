@@ -31,6 +31,7 @@ SOURCEB='https://github.com/Sprint-Core/Sprint/releases/download/v1.0.0.1/sprint
 ARCHIVEA=sprintcore-1.0.0.1-linux.tar
 #16.04
 ARCHIVEB=sprintcore-1.0.0.1-linux.tar
+SENTINELSRC='https://github.com/Sprint-Core/sentinel.git'
 
 #ADDNODES
 ADDNODEA=139.99.236.143:9977
@@ -105,12 +106,11 @@ function stop_daemon {
 genkey=$1
 
 clear
-
-echo -e"${PURPLE} Welcome to the CRYPTOTOOL Masternodes Script installation www.cryptotool.eu  ${NC}"
+echo -e "${PURPLE} Welcome to the CRYPTOTOOL Masternodes Script installation www.cryptotool.eu  ${NC}"
 echo -e
-echo -e"${PURPLE} Find more about CryptoTool on www.cryptotool.eu  ${NC}"
+echo -e "${PURPLE} Find more about CryptoTool on www.cryptotool.eu  ${NC}"
 echo -e
-echo -e"${PURPLE} French website  ${NC}"
+echo -e "${PURPLE} French website  ${NC}"
 echo -e
 echo -e "${GREEN}$NAME Masternode Setup Script V3 for Ubuntu LTS${NC}"
 echo -e
@@ -391,6 +391,28 @@ EOF
 #Finally, starting daemon with new $CONF
 $DAEMON -daemon
 delay 10
+
+#Install Sentinel 
+echo -e "${YELLOW}Installing sentinel...${NC}"
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get -y install python-pip
+sudo apt-get -y install virtualenv
+      cd ~/$HIDDEN
+	  git clone $SENTINELSRC
+
+    cd ~/$HIDDEN/sentinel
+	sudo mkdir database
+      virtualenv venv
+      ./venv/bin/pip install -r requirements.txt
+      ./venv/bin/python bin/sentinel.py
+    chmod -R 755 database
+    cd
+    crontab -l > sentinelcron
+    echo "* * * * * cd /root/.sprintcore/sentinel && ./venv/bin/python bin/sentinel.py >/dev/null 2>&1" >> sentinelcron
+
+crontab sentinelcron
+rm sentinelcron
 
 #Setting auto start cron job daemon
 cronjob="@reboot sleep 30 && $DAEMON -daemon"
