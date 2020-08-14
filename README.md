@@ -1,8 +1,8 @@
 
 # SPRINT-MN-setup 
 
- SprintPay Masternode Setup Script  This will allow install for ubuntu versions 18.04 or 16.04
-. Thanks Twystidceed for the code <br>
+ SprintPay Masternode Setup Script  This will allow install for ubuntu versions 18.04 or 16.04.
+ Thanks to Twystidceed for the base of this code <br>
 <li>sudo apt-get update
 <li>sudo apt-get install git
 <br><br>
