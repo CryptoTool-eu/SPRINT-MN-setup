@@ -106,7 +106,7 @@ function stop_daemon {
 genkey=$1
 
 clear
-echo -e "${PURPLE} Welcome to the CRYPTOTOOL Masternodes Script installation www.cryptotool.eu  ${NC}"
+echo -e "${PURPLE} Welcome to the CRYPTOTOOL Masternodes Script installation ${NC}"
 echo -e
 echo -e "${PURPLE} Find more about CryptoTool on www.cryptotool.eu  ${NC}"
 echo -e
