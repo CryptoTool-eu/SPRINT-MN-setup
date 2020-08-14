@@ -1,9 +1,9 @@
 #!/bin/bash
-# baremon 1.2 - BARE Masternode Monitoring 
+# sprintmon 1 - SPRINT Masternode Monitoring 
 NAME=bare
-SCRIPT=baremon.sh
-HIDDEN=.barev2
-TICKER=BARE
+SCRIPT=sprintmon.sh
+HIDDEN=.sprint
+TICKER=SPRX
 #Processing command line params
 if [ -z $1 ]; then dly=1; else dly=$1; fi   # Default refresh time is 1 sec
 
