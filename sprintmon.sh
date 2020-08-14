@@ -2,7 +2,7 @@
 # sprintmon - SPRINT Masternode Monitoring 
 NAME=sprint
 SCRIPT=sprintmon.sh
-HIDDEN=.sprint
+HIDDEN=.sprintcore
 TICKER=SPRX
 #Processing command line params
 if [ -z $1 ]; then dly=1; else dly=$1; fi   # Default refresh time is 1 sec
