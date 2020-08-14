@@ -28,9 +28,9 @@ SOURCEB='https://github.com/Sprint-Core/Sprint/releases/download/v1.0.0.1/sprint
 
 #The archive itself from the source
 #18.04
-ARCHIVEA=sprintcore-1.0.0.1-linux.tar.xz
+ARCHIVEA=sprintcore-1.0.0.1-linux.tar
 #16.04
-ARCHIVEB=sprintcore-1.0.0.1-linux.tar.xz
+ARCHIVEB=sprintcore-1.0.0.1-linux.tar
 
 #ADDNODES
 ADDNODEA=139.99.236.143:9977
