@@ -1,7 +1,7 @@
 
 # SPRINT-MN-setup 
 
- SprintPay Masternode Setup Script  
+ SprintPay Masternode Setup Script with Sentinel
  
  This will allow install for ubuntu versions 18.04 or 16.04.
 
