@@ -1,6 +1,6 @@
 #!/bin/bash
-# sprintmon 1 - SPRINT Masternode Monitoring 
-NAME=bare
+# sprintmon - SPRINT Masternode Monitoring 
+NAME=sprint
 SCRIPT=sprintmon.sh
 HIDDEN=.sprint
 TICKER=SPRX
