@@ -106,7 +106,11 @@ genkey=$1
 
 clear
 
-echo -e "${PURPLE}   CRYPTOTOOL www.cryptotool.eu  ${NC}"
+echo -e"${PURPLE} Welcome to the CRYPTOTOOL Masternodes Script installation www.cryptotool.eu  ${NC}"
+echo -e
+echo -e"${PURPLE} Find more about CryptoTool on www.cryptotool.eu  ${NC}"
+echo -e
+echo -e"${PURPLE} French website  ${NC}"
 echo -e
 echo -e "${GREEN}$NAME Masternode Setup Script V3 for Ubuntu LTS${NC}"
 echo -e
@@ -485,8 +489,9 @@ Enjoy your $TICKER Masternode and thanks for using this setup script!
 Great Thanks to Twystidceed for the base of this code  
 ...and make sure to check back for updates!
 
-Contact Niko82#6343 on discord if you need additional support
 "
+
+echo -e "${GREEN}Contact Niko82#6343 on discord if you need additional support${NC}"
 delay 10
 # Run $MONITOR
 sudo $MONITOR
