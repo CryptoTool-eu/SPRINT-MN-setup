@@ -45,13 +45,13 @@ FOLDER=SPRINT-MN-setup
 NAME='Sprint'
 
 #name2 is the actual name of the binary when installed on VPS [CASE SENSISTIVE]
-NAME2=sprintcore
+NAME2=sprint
 
 #Simply the Ticker of the coin for referenceing in the script - no usage case not sensitive
 TICKER=SPRX
 
 #actual name of the hidden folder for the coin [CASE SENSITIVE]
-HIDDEN=.sprint
+HIDDEN=.sprintcore
 
 #Actual name of the conf file in the hidden folder [CASE SENSITIVE]
 CONF=sprint.conf
