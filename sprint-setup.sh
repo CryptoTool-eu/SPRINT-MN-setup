@@ -1,10 +1,10 @@
 #!/bin/bash
-# Twystid's Masternode Setup Script V3.2 for Ubuntu
+# CryptoTool's Masternode Setup Script V3.2 for Ubuntu
 #
 # Script will attempt to auto detect primary public IP address
 # This script is capable of installing with or without swap depending on your VPS
 # Usage:
-# bash bare-setup.sh 
+# bash sprint-setup.sh 
 #
 
 #Color codes
@@ -15,55 +15,55 @@ PURPLE='\033[1;35m'
 NC='\033[0m' # No Color
 
 #TCP port
-PORT=32201
-RPC=32202
+PORT=9977
+RPC=9978
 
 #GLOBAL VARIABLES - Check the daemon deployment section for proper deployment
 
 #this is the Github Source for the binaries
 
-SOURCEA=https://github.com/BareCrypto/BARE-coin/releases/download/v2.0.0.6/BARE_v2.0.0.6_Ubuntu18_daemon.tar.xz
+SOURCEA=https://github.com/Sprint-Core/Sprint/releases/download/v1.0.0.1/sprintcore-1.0.0.1-linux.tar.xz
 #Version for ubuntu 16.04
-SOURCEB='https://github.com/BareCrypto/BARE-coin/releases/download/v2.0.0.6/BARE_v2.0.0.6_Ubuntu16_daemon.tar.xz'
+SOURCEB='https://github.com/Sprint-Core/Sprint/releases/download/v1.0.0.1/sprintcore-1.0.0.1-linux.tar.xz'
 
 #The archive itself from the source
 #18.04
-ARCHIVEA=BARE_v2.0.0.6_Ubuntu18_daemon.tar.xz
+ARCHIVEA=sprintcore-1.0.0.1-linux.tar.xz
 #16.04
-ARCHIVEB=BARE_v2.0.0.6_Ubuntu16_daemon.tar.xz
+ARCHIVEB=sprintcore-1.0.0.1-linux.tar.xz
 
 #ADDNODES
-ADDNODEA=51.79.26.4:32201
-ADDNODEB=185.183.98.68:32201
-ADDNODEC=5.45.105.212
+ADDNODEA=139.99.236.143:9977
+ADDNODEB=95.179.217.112:9977
+ADDNODEC=173.249.14.78:9977
 
 
 #name of the folder created with the git clone when clonign the repository
-FOLDER=BARE-MN-setup
+FOLDER=SPRINT-MN-setup
 
 #official name
-NAME='Bare'
+NAME='Sprint'
 
 #name2 is the actual name of the binary when installed on VPS [CASE SENSISTIVE]
-NAME2=bare
+NAME2=sprint
 
 #Simply the Ticker of the coin for referenceing in the script - no usage case not sensitive
-TICKER=BARE
+TICKER=SPRX
 
 #actual name of the hidden folder for the coin [CASE SENSITIVE]
-HIDDEN=.barev2
+HIDDEN=.sprint
 
 #Actual name of the conf file in the hidden folder [CASE SENSITIVE]
-CONF=bare.conf
+CONF=sprint.conf
 
 #actual name od the coin daemon [CASE SENSITIVE]
-DAEMON=bared
+DAEMON=sprintd
 
 #Actual name of the coin daemon -cli [CASE SENSITIVE]
-CLI=bare-cli
+CLI=sprint-cli
 
 #name of the monitor script [CASE SENSITIVE]
-MONITOR=baremon.sh
+MONITOR=sprintmon.sh
 
 #only enable if needed due to binaries being extracted to a second folder within the cloned folder
 #FOLDER2=if needed 
@@ -105,21 +105,8 @@ function stop_daemon {
 genkey=$1
 
 clear
-echo -e "${PURPLE}####### #     # #     #  #####  ####### ### ######  ${NC}"
-echo -e "${PURPLE}   #    #  #  #  #   #  #     #    #     #  #     # ${NC}"
-echo -e "${PURPLE}   #    #  #  #   # #   #          #     #  #     # ${NC}"
-echo -e "${PURPLE}   #    #  #  #    #     #####     #     #  #     # ${NC}"
-echo -e "${PURPLE}   #    #  #  #    #          #    #     #  #     # ${NC}"
-echo -e "${PURPLE}   #    #  #  #    #    #     #    #     #  #     # ${NC}"
-echo -e "${PURPLE}   #     ## ##     #     #####     #    ### ######  ${NC}"
-echo -e
-echo -e "${PURPLE}      #     # ### #     # ### #     #  #####  ${NC}"
-echo -e "${PURPLE}      ##   ##  #  ##    #  #  ##    # #     # ${NC}"
-echo -e "${PURPLE}      # # # #  #  # #   #  #  # #   # #       ${NC}"
-echo -e "${PURPLE}      #  #  #  #  #  #  #  #  #  #  # #  #### ${NC}"
-echo -e "${PURPLE}      #     #  #  #   # #  #  #   # # #     # ${NC}"
-echo -e "${PURPLE}      #     #  #  #    ##  #  #    ## #     # ${NC}"
-echo -e "${PURPLE}      #     # ### #     # ### #     #  #####  ${NC}"
+
+echo -e "${PURPLE}   CRYPTOTOOL www.cryptotool.eu  ${NC}"
 echo -e
 echo -e "${GREEN}$NAME Masternode Setup Script V3 for Ubuntu LTS${NC}"
 echo -e
@@ -482,7 +469,7 @@ then start the $DAEMON daemon back up:
              to edit:   ${YELLOW}nano ~/$HIDDEN/$CONF${NC}
              to start:  ${YELLOW}$DAEMON -daemon{NC}
 ========================================================================
-To view LSR debug log showing all MN network activity in realtime:
+To view debug log showing all MN network activity in realtime:
              ${YELLOW}tail -f ~/$HIDDEN/debug.log${NC}
 ========================================================================
 To monitor system resource utilization and running processes:
@@ -495,11 +482,10 @@ or just type 'node' and hit <TAB> to autocomplete script name.
 ========================================================================
 Enjoy your $TICKER Masternode and thanks for using this setup script!
 
-If you found this script useful, please donate to : 
-${GREEN}no donations at this time ${NC}
+Great Thanks to Twystidceed for the base of this code  
 ...and make sure to check back for updates!
 
-Contact Twystidceed#4126 on discord if you need additional support
+Contact Niko82#6343 on discord if you need additional support
 "
 delay 10
 # Run $MONITOR
