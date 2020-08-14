@@ -22,9 +22,9 @@ RPC=9978
 
 #this is the Github Source for the binaries
 
-SOURCEA=https://github.com/Sprint-Core/Sprint/releases/download/v1.0.0.1/sprintcore-1.0.0.1-linux.tar.xz
+SOURCEA=https://github.com/Sprint-Core/Sprint/releases/download/v1.0.0.1/sprintcore-1.0.0.1-linux.tar
 #Version for ubuntu 16.04
-SOURCEB='https://github.com/Sprint-Core/Sprint/releases/download/v1.0.0.1/sprintcore-1.0.0.1-linux.tar.xz'
+SOURCEB='https://github.com/Sprint-Core/Sprint/releases/download/v1.0.0.1/sprintcore-1.0.0.1-linux.tar'
 
 #The archive itself from the source
 #18.04
