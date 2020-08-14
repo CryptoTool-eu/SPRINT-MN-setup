@@ -7,5 +7,5 @@
 <li>sudo apt-get install git
 <br><br>
 <li>Copy the entire line below and paste into your ssh session or vps terminal
- <li>git clone https://github.com/CryptoTool-eu/SPRINT-MN-setup.git && cd SPRINT-MN-setup && bash sprint-setup.sh
+ <li>git clone https://github.com/CryptoTool-eu/SprintPay.git && cd SPRINT-MN-setup && bash sprint-setup.sh
  <br>
